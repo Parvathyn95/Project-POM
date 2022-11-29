@@ -1,8 +1,12 @@
 package pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+
+import utilities.ExcelUtility;
 
 public class SimpleFormDemoPage {
 	public WebDriver driver;
@@ -18,16 +22,19 @@ public class SimpleFormDemoPage {
 	
 	}
 	
-		public void verifySingleInputField() {
+		public void verifySingleInputField() throws IOException {
+			ExcelUtility excelUtilityObj = new ExcelUtility();
 			String inputText = "Apple";
-			String expectedMessage = "Your Message : "+inputText,actualMessage;
+			String expectedMessage,actualMessage;
 			driver.findElement(enterMessageField).sendKeys(inputText);
 			driver.findElement(showMessageButton).click();
 			actualMessage = driver.findElement(yourMessageField).getText();
-			Assert.assertEquals(expectedMessage,actualMessage, "Expected and actual messages are not same");
+			expectedMessage = ExcelUtility.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
+			Assert.assertEquals(expectedMessage+inputText,actualMessage, "Expected and actual messages are not same");
 		}
 		
-		public void verifyTwoInputField() {
+		public void verifyTwoInputField() throws IOException {
+			ExcelUtility excelUtilityObj = new ExcelUtility();
 			int aValue,bValue,getTotalValue;
 			String valueA="25",valueB="50";
 			String expectedMessage , actualMessage;
@@ -37,9 +44,9 @@ public class SimpleFormDemoPage {
 			bValue=Integer.valueOf(valueB);
 			driver.findElement(totValueButton).click();
 			getTotalValue = aValue+bValue;
-			expectedMessage = "Total A + B : "+getTotalValue;
 			actualMessage = driver.findElement(totalAPlusBField).getText();
-			Assert.assertEquals(expectedMessage, actualMessage,"Actual and Expected Messages are not equal");
+			expectedMessage = ExcelUtility.getStringMultiColor(1,1,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
+			Assert.assertEquals(expectedMessage+getTotalValue, actualMessage,"Actual and Expected Messages are not equal");
 			
 		}
 }

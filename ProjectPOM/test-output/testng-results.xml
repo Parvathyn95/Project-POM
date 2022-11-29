@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14492" started-at="2022-11-28T15:03:04Z" finished-at="2022-11-28T15:03:19Z">
+  <suite name="Suite" duration-ms="99790" started-at="2022-11-29T11:12:32Z" finished-at="2022-11-29T11:14:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14492" started-at="2022-11-28T15:03:04Z" finished-at="2022-11-28T15:03:19Z">
+    <test name="Test" duration-ms="99790" started-at="2022-11-29T11:12:32Z" finished-at="2022-11-29T11:14:12Z">
       <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="6994" started-at="2022-11-28T19:03:04Z" finished-at="2022-11-28T19:03:11Z">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="56043" started-at="2022-11-29T15:12:32Z" finished-at="2022-11-29T15:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="selectColorAndVerifySelectMultipleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectMultipleInputColor" duration-ms="1925" started-at="2022-11-28T19:03:11Z" finished-at="2022-11-28T19:03:13Z">
+        <test-method status="PASS" signature="selectColorAndVerifySelectMultipleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectMultipleInputColor" duration-ms="1259" started-at="2022-11-29T15:13:28Z" finished-at="2022-11-29T15:13:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectColorAndVerifySelectMultipleInputColor -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="260" started-at="2022-11-28T19:03:13Z" finished-at="2022-11-28T19:03:13Z">
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="179" started-at="2022-11-29T15:13:30Z" finished-at="2022-11-29T15:13:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="4393" started-at="2022-11-28T19:03:13Z" finished-at="2022-11-28T19:03:18Z">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="41632" started-at="2022-11-29T15:13:30Z" finished-at="2022-11-29T15:14:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="selectColorAndVerifySelectSingleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectSingleInputColor" duration-ms="600" started-at="2022-11-28T19:03:18Z" finished-at="2022-11-28T19:03:18Z">
+        <test-method status="PASS" signature="selectColorAndVerifySelectSingleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectSingleInputColor" duration-ms="530" started-at="2022-11-29T15:14:11Z" finished-at="2022-11-29T15:14:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectColorAndVerifySelectSingleInputColor -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="287" started-at="2022-11-28T19:03:18Z" finished-at="2022-11-28T19:03:19Z">
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="120" started-at="2022-11-29T15:14:12Z" finished-at="2022-11-29T15:14:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->

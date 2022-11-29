@@ -25,26 +25,28 @@ public class SelectInputPage {
 	}
 	public void verifySelectSingleInputColor() throws IOException {
 		ExcelUtility excelUtilityObj = new ExcelUtility();
-		String inputColor,expectedMessage="Selected Color : ",actualMessage;
+		String inputColor,expectedMessage,actualMessage;
 		driver.navigate().to("https://selenium.obsqurazone.com/select-input.php");
 		Select inputSelect = new Select(driver.findElement(selectInputField));
-		inputColor=excelUtilityObj.ReadStringDataExcel(0,0);
+		inputColor=excelUtilityObj.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
 		inputSelect.selectByVisibleText(inputColor);
 		actualMessage = driver.findElement(actMessage).getText();
+		expectedMessage = excelUtilityObj.getStringMultiColor(1,1,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
 		Assert.assertEquals(expectedMessage+inputColor, actualMessage);
 		
 	}
 	public void verifySelectMultipleInputColor() throws IOException {
 		ExcelUtility excelUtilityObj = new ExcelUtility();
-		String actualMessage,expectedMessage="All selected colors are : ",color1,color2,color3;
+		String actualMessage,expectedMessage,color1,color2,color3;
 		driver.navigate().to("https://selenium.obsqurazone.com/select-input.php");
 		Select multipleSelect = new Select(driver.findElement(multipleInputField));
 		multipleSelect.isMultiple();
-		multipleSelect.selectByVisibleText(excelUtilityObj.ReadStringDataExcel(0,0));
-		multipleSelect.selectByVisibleText(excelUtilityObj.ReadStringDataExcel(1,0));
-		multipleSelect.selectByVisibleText(excelUtilityObj.ReadStringDataExcel(2,0));
+		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
+		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(2,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
+		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(3,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
 		driver.findElement(getAllSelectedButton).click();
 		actualMessage = driver.findElement(multipleActualMessage).getText();
+		expectedMessage = excelUtilityObj.getStringMultiColor(2,1,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
 		List<WebElement> multipleColor =  multipleSelect.getOptions();
 		color1=multipleColor.get(0).getText();
 		color2=multipleColor.get(1).getText();
