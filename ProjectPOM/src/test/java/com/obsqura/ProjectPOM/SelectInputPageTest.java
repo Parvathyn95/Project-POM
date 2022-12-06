@@ -8,12 +8,12 @@ import pages.SelectInputPage;
 
 public class SelectInputPageTest extends BaseObs{
 	SelectInputPage selectInputPageObj;
-	@Test
+	@Test (groups= {"regression"})
 	public void selectColorAndVerifySelectSingleInputColor() throws IOException {
 		SelectInputPage selectInputPageObj = new SelectInputPage(driver);
 		selectInputPageObj.verifySelectSingleInputColor();
 	}
-	@Test
+	@Test (groups= {"smoke"})
 	public void selectColorAndVerifySelectMultipleInputColor() throws IOException {
 		SelectInputPage selectInputPageObj = new SelectInputPage(driver);
 		selectInputPageObj.verifySelectMultipleInputColor();

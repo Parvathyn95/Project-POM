@@ -6,7 +6,6 @@
       <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
         <methods>
           <include name="driverClose"/>
-          <include name="selectColorAndVerifySelectMultipleInputColor"/>
           <include name="initBrowser"/>
           <include name="selectColorAndVerifySelectSingleInputColor"/>
         </methods>

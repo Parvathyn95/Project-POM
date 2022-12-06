@@ -1,9 +1,12 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
@@ -25,12 +28,14 @@ public class RadioButtonsDemoPage {
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsEnabled,femaleIsEnabled,maleIsSelected,femaleIsSelected;
 		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
+		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
 		maleIsEnabled = driver.findElement(maleRadioButton).isEnabled();
 		femaleIsEnabled = driver.findElement(femaleRadioButton).isEnabled();
+		wait.until(ExpectedConditions.elementSelectionStateToBe(maleRadioButton, false));
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
-			if(maleIsEnabled && femaleIsEnabled) {
-				if(maleIsSelected && femaleIsSelected) {
+			if((maleIsEnabled && femaleIsEnabled)==true) {
+				if((maleIsSelected && femaleIsSelected)!=true) {
 					driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();
 					expectedMessage = excelUtilityObj.getStringMultiColor(1, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Button Demo");
@@ -73,7 +78,7 @@ public class RadioButtonsDemoPage {
 		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
-				if(maleIsSelected && femaleIsSelected) {
+				if((maleIsSelected && femaleIsSelected)!=true) {
 					driver.findElement(femaleRadioButton).click();
 					driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();

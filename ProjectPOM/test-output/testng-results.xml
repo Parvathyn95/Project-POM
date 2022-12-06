@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="99790" started-at="2022-11-29T11:12:32Z" finished-at="2022-11-29T11:14:12Z">
+  <suite name="Suite" duration-ms="8618" started-at="2022-12-06T18:07:42Z" finished-at="2022-12-06T18:07:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="99790" started-at="2022-11-29T11:12:32Z" finished-at="2022-11-29T11:14:12Z">
-      <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="56043" started-at="2022-11-29T15:12:32Z" finished-at="2022-11-29T15:13:28Z">
+    <test name="Test" duration-ms="8618" started-at="2022-12-06T18:07:42Z" finished-at="2022-12-06T18:07:51Z">
+      <class name="com.obsqura.ProjectPOM.RadioButtonsDemoTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.RadioButtonsDemoTest@41fbdac4]" name="initBrowser" is-config="true" duration-ms="7715" started-at="2022-12-06T22:07:42Z" finished-at="2022-12-06T22:07:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="selectColorAndVerifySelectMultipleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectMultipleInputColor" duration-ms="1259" started-at="2022-11-29T15:13:28Z" finished-at="2022-11-29T15:13:30Z">
+        <test-method status="PASS" signature="clickAndVerifyFemaleRadioButtonSelectedMessageCheck()[pri:0, instance:com.obsqura.ProjectPOM.RadioButtonsDemoTest@41fbdac4]" name="clickAndVerifyFemaleRadioButtonSelectedMessageCheck" duration-ms="640" started-at="2022-12-06T22:07:50Z" finished-at="2022-12-06T22:07:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectColorAndVerifySelectMultipleInputColor -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="179" started-at="2022-11-29T15:13:30Z" finished-at="2022-11-29T15:13:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverClose -->
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="41632" started-at="2022-11-29T15:13:30Z" finished-at="2022-11-29T15:14:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="selectColorAndVerifySelectSingleInputColor()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="selectColorAndVerifySelectSingleInputColor" duration-ms="530" started-at="2022-11-29T15:14:11Z" finished-at="2022-11-29T15:14:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectColorAndVerifySelectSingleInputColor -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SelectInputPageTest@3fee9989]" name="driverClose" is-config="true" duration-ms="120" started-at="2022-11-29T15:14:12Z" finished-at="2022-11-29T15:14:12Z">
+        </test-method> <!-- clickAndVerifyFemaleRadioButtonSelectedMessageCheck -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.RadioButtonsDemoTest@41fbdac4]" name="driverClose" is-config="true" duration-ms="188" started-at="2022-12-06T22:07:51Z" finished-at="2022-12-06T22:07:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.obsqura.ProjectPOM.SelectInputPageTest -->
+      </class> <!-- com.obsqura.ProjectPOM.RadioButtonsDemoTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
