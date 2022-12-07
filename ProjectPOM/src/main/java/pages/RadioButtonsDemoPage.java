@@ -5,12 +5,14 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import utilities.ExcelUtility;
+import utilities.WaitUtility;
 
 public class RadioButtonsDemoPage {
 	public WebDriver driver;
@@ -28,10 +30,10 @@ public class RadioButtonsDemoPage {
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsEnabled,femaleIsEnabled,maleIsSelected,femaleIsSelected;
 		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
-		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
 		maleIsEnabled = driver.findElement(maleRadioButton).isEnabled();
 		femaleIsEnabled = driver.findElement(femaleRadioButton).isEnabled();
-		wait.until(ExpectedConditions.elementSelectionStateToBe(maleRadioButton, false));
+		WebElement MaleRadioButton = driver.findElement(maleRadioButton);
+		WaitUtility.waitForElementSelectionStateToBe(driver, MaleRadioButton, false);
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
 			if((maleIsEnabled && femaleIsEnabled)==true) {
@@ -56,6 +58,8 @@ public class RadioButtonsDemoPage {
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsSelected,femaleIsSelected;
 		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
+		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
+		//wait.until(ExpectedConditions.alertIsPresent());
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
 				if(maleIsSelected && femaleIsSelected) {

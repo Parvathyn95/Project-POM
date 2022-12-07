@@ -3,14 +3,17 @@ package pages;
 import java.io.IOException;
 import java.time.Duration;
 
+import utilities.WaitUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import utilities.ExcelUtility;
+import utilities.WaitUtility;
 
 public class SimpleFormDemoPage {
 	public WebDriver driver;
@@ -22,20 +25,30 @@ public class SimpleFormDemoPage {
 	By twoInputTitleField =By.xpath("(//div[@class='card']//child::div[@class='card-header'])[3]");
 	By totValueButton=By.xpath("//button[@id='button-two']");
 	By totalAPlusBField = By.xpath("//div[@id='message-two']");
+	
+
 		public SimpleFormDemoPage(WebDriver driver) {
 			this.driver=driver;
 	
-	}
+		}
+		public void verifyTitleAndUrl() {
+			String title="Obsqura Testing",actualTitle,actualUrl,fraction="simple-form-demo.php";
+			WaitUtility.waitForTitleContains(driver, title);
+			actualTitle=driver.getTitle();
+			WaitUtility.waitForUrlContains(driver, fraction);
+			actualUrl=driver.getCurrentUrl();
+		}
 	
 		public void verifySingleInputField() throws IOException {
 			ExcelUtility excelUtilityObj = new ExcelUtility();
-			String inputText = "Apple";
+			String inputText = "Apple",title="Obsqura Testing";
+			WaitUtility.waitForTitleIs(driver, title);
 			String expectedMessage,actualMessage;
 			driver.findElement(enterMessageField).sendKeys(inputText);
-			WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.elementToBeClickable(showMessageButton));
+			WebElement ShowMessageButton = driver.findElement(showMessageButton);
+			WaitUtility.waitForElementToBeClickable(driver, ShowMessageButton);
 			driver.findElement(showMessageButton).click();
-			wait.until(ExpectedConditions.visibilityOfElementLocated(yourMessageField));
+			WaitUtility.waitForVisibilityOfElementLocated(driver, yourMessageField);
 			actualMessage = driver.findElement(yourMessageField).getText();
 			expectedMessage = ExcelUtility.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
 			Assert.assertEquals(expectedMessage+inputText,actualMessage, "Expected and actual messages are not same");
@@ -46,14 +59,14 @@ public class SimpleFormDemoPage {
 			int aValue,bValue,getTotalValue;
 			String valueA="25",valueB="50";
 			String actualTitle = null,expectedMessage , actualMessage;
-			WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
 			driver.findElement(enterValueA).sendKeys(valueA);
 			driver.findElement(enterValueB).sendKeys(valueB);
 			aValue=Integer.valueOf(valueA);
 			bValue=Integer.valueOf(valueB);
+			WaitUtility.waitForElementToBeClickable(driver, totValueButton);
 			driver.findElement(totValueButton).click();
 			getTotalValue = aValue+bValue;
-			wait.until(ExpectedConditions.presenceOfElementLocated(totalAPlusBField));
+			WaitUtility.waitForPresenceOfElementLocated(driver, totalAPlusBField);
 			actualMessage = driver.findElement(totalAPlusBField).getText();
 			expectedMessage = ExcelUtility.getStringMultiColor(1,1,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
 			Assert.assertEquals(expectedMessage+getTotalValue, actualMessage,"Actual and Expected Messages are not equal");

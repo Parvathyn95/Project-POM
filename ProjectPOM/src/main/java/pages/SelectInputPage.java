@@ -5,14 +5,18 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import utilities.ExcelUtility;
+import utilities.WaitUtility;
 
 public class SelectInputPage {
 	public ExcelUtility excelUtilityObj;
@@ -30,6 +34,11 @@ public class SelectInputPage {
 		ExcelUtility excelUtilityObj = new ExcelUtility();
 		String inputColor,expectedMessage,actualMessage;
 		driver.navigate().to("https://selenium.obsqurazone.com/select-input.php");
+		Wait fluentWait = new FluentWait<WebDriver> (driver)
+				.withTimeout(Duration.ofSeconds(25))
+				.pollingEvery(Duration.ofSeconds(10))
+				.ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.elementToBeClickable(selectInputField));
 		Select inputSelect = new Select(driver.findElement(selectInputField));
 		inputColor=excelUtilityObj.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
 		inputSelect.selectByVisibleText(inputColor);
@@ -47,8 +56,7 @@ public class SelectInputPage {
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(2,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(3,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
-		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getAllSelectedButton));
+		WaitUtility.waitForVisibilityOfAllElementsLocatedBy(driver, getAllSelectedButton);
 		driver.findElement(getAllSelectedButton).click();
 		actualMessage = driver.findElement(multipleActualMessage).getText();
 		expectedMessage = excelUtilityObj.getStringMultiColor(2,1,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
@@ -56,7 +64,7 @@ public class SelectInputPage {
 		color1=multipleColor.get(0).getText();
 		color2=multipleColor.get(1).getText();
 		color3=multipleColor.get(2).getText();
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getAllSelectedButton));
+		WaitUtility.waitForPresenceOfAllElementsLocatedBy(driver, getAllSelectedButton);
 		Assert.assertEquals(expectedMessage+color3, actualMessage);		
 	}
 }

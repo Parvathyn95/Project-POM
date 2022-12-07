@@ -10,6 +10,11 @@ import pages.SimpleFormDemoPage;
 public class SimpleFormDemoTest extends BaseObs {
 	SimpleFormDemoPage simpleFormDemoPageObj;  //variable given globally
 	@Test
+	public void checkAndVerifyTitleAndUrl() throws IOException {
+		simpleFormDemoPageObj = new SimpleFormDemoPage(driver);
+		simpleFormDemoPageObj.verifyTitleAndUrl();
+	}
+	@Test
 	public void enterMessageAndVerifySingleInputField() throws IOException {
 		simpleFormDemoPageObj = new SimpleFormDemoPage(driver);
 		simpleFormDemoPageObj.verifySingleInputField();
