@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import utilities.ExcelUtility;
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class RadioButtonsDemoPage {
@@ -38,7 +39,9 @@ public class RadioButtonsDemoPage {
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
 			if((maleIsEnabled && femaleIsEnabled)==true) {
 				if((maleIsSelected && femaleIsSelected)!=true) {
-					driver.findElement(showSelectedValueButton).click();
+					WebElement ShowSelectedValueButtonWebElement = driver.findElement(showSelectedValueButton);
+					PageUtility.clickOnElement(ShowSelectedValueButtonWebElement);
+					//driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();
 					expectedMessage = excelUtilityObj.getStringMultiColor(1, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Button Demo");
 					Assert.assertEquals(expectedMessage, actualMessage, "Expected and Actual Messages are not equal");

@@ -9,9 +9,9 @@
   	</run>  
   </groups> -->
     <classes>
-      <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
+      <class name="com.obsqura.ProjectPOM.SimpleFormDemoTest">
       	<methods>
-      		<include name="selectColorAndVerifySelectMultipleInputColor"/>
+      		<include name="enterMessageAndVerifySingleInputField"/>
       	</methods>
       </class>
      <!--  <class name="com.obsqura.ProjectPOM.SimpleFormDemoTest"/> -->

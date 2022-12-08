@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.time.Duration;
 
 import utilities.WaitUtility;
+import utilities.PageUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,10 +46,15 @@ public class SimpleFormDemoPage {
 			String inputText = "Apple",title="Obsqura Testing";
 			WaitUtility.waitForTitleIs(driver, title);
 			String expectedMessage,actualMessage;
-			driver.findElement(enterMessageField).sendKeys(inputText);
 			WebElement ShowMessageButton = driver.findElement(showMessageButton);
+			//driver.findElement(enterMessageField).sendKeys(inputText);
+			WebElement EnterMessageFieldWebElement = driver.findElement(enterMessageField);
+			inputText=ExcelUtility.getStringMultiColor(1,2,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
+			PageUtility.enterText(EnterMessageFieldWebElement, inputText);
 			WaitUtility.waitForElementToBeClickable(driver, ShowMessageButton);
-			driver.findElement(showMessageButton).click();
+			//driver.findElement(showMessageButton).click();
+			WebElement ShowMessageButtonWebElement = driver.findElement(showMessageButton);
+			PageUtility.clickOnElement(ShowMessageButtonWebElement);
 			WaitUtility.waitForVisibilityOfElementLocated(driver, yourMessageField);
 			actualMessage = driver.findElement(yourMessageField).getText();
 			expectedMessage = ExcelUtility.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Simple Form Demo");
@@ -72,4 +79,5 @@ public class SimpleFormDemoPage {
 			Assert.assertEquals(expectedMessage+getTotalValue, actualMessage,"Actual and Expected Messages are not equal");
 			
 		}
+		
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import utilities.PageUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -57,6 +58,8 @@ public class SelectInputPage {
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(2,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(3,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
 		WaitUtility.waitForVisibilityOfAllElementsLocatedBy(driver, getAllSelectedButton);
+		WebElement GetAllSelectedButtonWebElement = driver.findElement(getAllSelectedButton);
+		PageUtility.clickOnElement(GetAllSelectedButtonWebElement);
 		driver.findElement(getAllSelectedButton).click();
 		actualMessage = driver.findElement(multipleActualMessage).getText();
 		expectedMessage = excelUtilityObj.getStringMultiColor(2,1,"\\src\\main\\java\\Resources\\color.xlsx","Select Input");
@@ -64,7 +67,7 @@ public class SelectInputPage {
 		color1=multipleColor.get(0).getText();
 		color2=multipleColor.get(1).getText();
 		color3=multipleColor.get(2).getText();
-		WaitUtility.waitForPresenceOfAllElementsLocatedBy(driver, getAllSelectedButton);
-		Assert.assertEquals(expectedMessage+color3, actualMessage);		
+		WaitUtility.waitForPresenceOfAllElementsLocatedBy(driver, getAllSelectedButton);   //wait for actual message(not for get all selected button)
+		Assert.assertEquals(expectedMessage+color1+color2+color3, actualMessage);		
 	}
 }
