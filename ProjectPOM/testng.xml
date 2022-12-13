@@ -8,13 +8,14 @@
   		<include name="regression"/>
   	</run>  
   </groups> -->
+  <parameter name="expectedString" value="Checkbox Demo"/>
     <classes>
-      <class name="com.obsqura.ProjectPOM.SimpleFormDemoTest">
-      	<methods>
-      		<include name="enterMessageAndVerifySingleInputField"/>
+      <class name="com.obsqura.ProjectPOM.NavigationMenuSelectTest"/>
+      	<!-- <methods>
+      		<include name="checkNavigationMenuClick"/>
       	</methods>
-      </class>
-     <!--  <class name="com.obsqura.ProjectPOM.SimpleFormDemoTest"/> -->
+      </class> -->
+      <!-- <class name="com.obsqura.ProjectPOM.SimpleFormDemoTest"/> -->
       <!-- <class name="com.obsqura.ProjectPOM.RadioButtonsDemoTest"/> -->
     </classes>
   </test> <!-- Test -->
