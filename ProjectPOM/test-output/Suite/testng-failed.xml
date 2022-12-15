@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.obsqura.ProjectPOM.NavigationMenuSelectTest">
+      <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
         <methods>
           <include name="driverClose"/>
+          <include name="selectColorAndVerifySelectMultipleInputColor"/>
           <include name="initBrowser"/>
-          <include name="checkNavigationMenuClick"/>
+          <include name="selectColorAndVerifySelectSingleInputColor"/>
         </methods>
-      </class> <!-- com.obsqura.ProjectPOM.NavigationMenuSelectTest -->
+      </class> <!-- com.obsqura.ProjectPOM.SelectInputPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

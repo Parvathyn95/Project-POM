@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="7922" started-at="2022-12-13T09:14:55Z" finished-at="2022-12-13T09:15:03Z">
+  <suite name="Suite" duration-ms="14169" started-at="2022-12-15T07:44:20Z" finished-at="2022-12-15T07:44:34Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="7922" started-at="2022-12-13T09:14:55Z" finished-at="2022-12-13T09:15:03Z">
-      <class name="com.obsqura.ProjectPOM.NavigationMenuSelectTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.NavigationMenuSelectTest@5700d6b1]" name="initBrowser" is-config="true" duration-ms="7200" started-at="2022-12-13T13:14:55Z" finished-at="2022-12-13T13:15:02Z">
+    <test name="Test" duration-ms="14169" started-at="2022-12-15T07:44:20Z" finished-at="2022-12-15T07:44:34Z">
+      <class name="com.obsqura.ProjectPOM.RowAndColumnCountTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="initBrowser" is-config="true" duration-ms="12263" started-at="2022-12-15T11:44:20Z" finished-at="2022-12-15T11:44:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="checkNavigationMenuClick(java.lang.String)[pri:0, instance:com.obsqura.ProjectPOM.NavigationMenuSelectTest@5700d6b1]" name="checkNavigationMenuClick" duration-ms="556" started-at="2022-12-13T13:15:02Z" finished-at="2022-12-13T13:15:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Simple Form Demo]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="findCountColumnSize()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="findCountColumnSize" duration-ms="1669" started-at="2022-12-15T11:44:32Z" finished-at="2022-12-15T11:44:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkNavigationMenuClick -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.NavigationMenuSelectTest@5700d6b1]" name="driverClose" is-config="true" duration-ms="129" started-at="2022-12-13T13:15:03Z" finished-at="2022-12-13T13:15:03Z">
+        </test-method> <!-- findCountColumnSize -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="driverClose" is-config="true" duration-ms="202" started-at="2022-12-15T11:44:34Z" finished-at="2022-12-15T11:44:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.obsqura.ProjectPOM.NavigationMenuSelectTest -->
+      </class> <!-- com.obsqura.ProjectPOM.RowAndColumnCountTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

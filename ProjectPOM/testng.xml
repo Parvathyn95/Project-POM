@@ -8,9 +8,16 @@
   		<include name="regression"/>
   	</run>  
   </groups> -->
-  <parameter name="expectedString" value="Checkbox Demo"/>
+ <!--  <parameter name="expectedString" value="Checkbox Demo"/> -->
+  <!-- <parameter name="expectedString" value="
+Input Form"/> -->
     <classes>
-      <class name="com.obsqura.ProjectPOM.NavigationMenuSelectTest"/>
+      <class name="com.obsqura.ProjectPOM.RowAndColumnCountTest">
+      	<methods>
+      		<include name="findCountColumnSize"/>
+      	</methods>
+      </class>
+      <!-- <class name="com.obsqura.ProjectPOM.SideNavigationMenuSelectTest"/> -->
       	<!-- <methods>
       		<include name="checkNavigationMenuClick"/>
       	</methods>

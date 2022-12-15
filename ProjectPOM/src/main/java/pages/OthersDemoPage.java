@@ -59,11 +59,4 @@ public class OthersDemoPage{
 		action.dragAndDropBy(source, xOffset,yOffset).build().perform();
 		WaitUtility.waitForVisibilityOfElementLocated(driver, droppedItemsList);	
 	}
-	public void rowAndColumnSize() {
-		driver.navigate().to("https://selenium.obsqurazone.com/table-pagination.php");
-		List columnElement = driver.findElements(By.xpath("//table[@id='dtBasicExample']//child::th[@class='th-sm sorting_disabled']"));
-		int columnCount=columnElement.size();
-		List rowElement= driver.findElements(By.xpath("//table[@id='dtBasicExample']//child::tbody//tr"));
-		
-	}
 }

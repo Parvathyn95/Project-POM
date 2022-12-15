@@ -30,7 +30,6 @@ public class RadioButtonsDemoPage {
 		String actualMessage,expectedMessage;
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsEnabled,femaleIsEnabled,maleIsSelected,femaleIsSelected;
-		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 		maleIsEnabled = driver.findElement(maleRadioButton).isEnabled();
 		femaleIsEnabled = driver.findElement(femaleRadioButton).isEnabled();
 		WebElement MaleRadioButton = driver.findElement(maleRadioButton);
@@ -43,7 +42,7 @@ public class RadioButtonsDemoPage {
 					PageUtility.clickOnElement(ShowSelectedValueButtonWebElement);
 					//driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();
-					expectedMessage = excelUtilityObj.getStringMultiColor(1, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Button Demo");
+					expectedMessage = excelUtilityObj.getStringMultiColor(1, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Buttons Demo");
 					Assert.assertEquals(expectedMessage, actualMessage, "Expected and Actual Messages are not equal");
 					
 				}
@@ -60,7 +59,6 @@ public class RadioButtonsDemoPage {
 		String actualMessage,expectedMessage;
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsSelected,femaleIsSelected;
-		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
 		//wait.until(ExpectedConditions.alertIsPresent());
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
@@ -69,7 +67,7 @@ public class RadioButtonsDemoPage {
 					driver.findElement(maleRadioButton).click();
 					driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();
-					expectedMessage = excelUtilityObj.getStringMultiColor(2, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Button Demo");
+					expectedMessage = excelUtilityObj.getStringMultiColor(2, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Buttons Demo");
 					Assert.assertEquals(expectedMessage, actualMessage, "Expected and Actual Messages are not equal");
 					
 				}
@@ -82,14 +80,13 @@ public class RadioButtonsDemoPage {
 		String actualMessage,expectedMessage="";
 		SoftAssert softAssert = new SoftAssert();
 		Boolean maleIsSelected,femaleIsSelected;
-		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 		maleIsSelected = driver.findElement(maleRadioButton).isSelected();
 		femaleIsSelected = driver.findElement(femaleRadioButton).isSelected();
 				if((maleIsSelected && femaleIsSelected)!=true) {
 					driver.findElement(femaleRadioButton).click();
 					driver.findElement(showSelectedValueButton).click();
 					actualMessage = driver.findElement(actMessage).getText();
-					expectedMessage = excelUtilityObj.getStringMultiColor(3, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Button Demo");
+					expectedMessage = excelUtilityObj.getStringMultiColor(3, 0, "\\src\\main\\java\\Resources\\color.xlsx", "Radio Buttons Demo");
 					Assert.assertEquals(expectedMessage, actualMessage, "Expected and Actual Messages are not equal");
 					
 				}

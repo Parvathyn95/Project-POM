@@ -29,10 +29,6 @@ public class OthersDemoPageTest extends BaseObs{
 		othersDemoPageObj = new OthersDemoPage(driver);
 		othersDemoPageObj.verifyAndHoverChartDemo();
 	}
-	@Test
-	public void findRowAndColumnSize() throws IOException {
-		othersDemoPageObj = new OthersDemoPage(driver);
-		othersDemoPageObj.rowAndColumnSize();
-	}
+
 	
 }

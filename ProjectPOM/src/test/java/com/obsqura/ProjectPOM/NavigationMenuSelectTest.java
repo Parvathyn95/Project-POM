@@ -11,10 +11,10 @@ public class NavigationMenuSelectTest extends BaseObs {
 	NavigationMenuSelect navigationMenuSelectObj;
 	
 	@Test
-	@Parameters("expectedString")
-	public void checkNavigationMenuClick(String expectedString){
+	//@Parameters("expectedString")
+	public void checkNavigationMenuClick(){
 		navigationMenuSelectObj = new NavigationMenuSelect(driver);
-		navigationMenuSelectObj.navigationMenuClick(expectedString);
+		navigationMenuSelectObj.navigationMenuClick("Checkbox Demo");
 	}
 
 }

@@ -34,7 +34,6 @@ public class SelectInputPage {
 	public void verifySelectSingleInputColor() throws IOException {
 		ExcelUtility excelUtilityObj = new ExcelUtility();
 		String inputColor,expectedMessage,actualMessage;
-		driver.navigate().to("https://selenium.obsqurazone.com/select-input.php");
 		Wait fluentWait = new FluentWait<WebDriver> (driver)
 				.withTimeout(Duration.ofSeconds(25))
 				.pollingEvery(Duration.ofSeconds(10))
@@ -51,7 +50,6 @@ public class SelectInputPage {
 	public void verifySelectMultipleInputColor() throws IOException {
 		ExcelUtility excelUtilityObj = new ExcelUtility();
 		String actualMessage,expectedMessage,color1,color2,color3;
-		driver.navigate().to("https://selenium.obsqurazone.com/select-input.php");
 		Select multipleSelect = new Select(driver.findElement(multipleInputField));
 		multipleSelect.isMultiple();
 		multipleSelect.selectByVisibleText(excelUtilityObj.getStringMultiColor(1,0,"\\src\\main\\java\\Resources\\color.xlsx","Select Input"));
@@ -68,6 +66,6 @@ public class SelectInputPage {
 		color2=multipleColor.get(1).getText();
 		color3=multipleColor.get(2).getText();
 		WaitUtility.waitForPresenceOfAllElementsLocatedBy(driver, getAllSelectedButton);   //wait for actual message(not for get all selected button)
-		Assert.assertEquals(expectedMessage+color1+color2+color3, actualMessage);		
+		Assert.assertEquals(expectedMessage, actualMessage);		
 	}
 }
