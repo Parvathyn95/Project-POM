@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14169" started-at="2022-12-15T07:44:20Z" finished-at="2022-12-15T07:44:34Z">
+  <suite name="Suite" duration-ms="9696" started-at="2022-12-19T12:20:39Z" finished-at="2022-12-19T12:20:49Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14169" started-at="2022-12-15T07:44:20Z" finished-at="2022-12-15T07:44:34Z">
-      <class name="com.obsqura.ProjectPOM.RowAndColumnCountTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="initBrowser" is-config="true" duration-ms="12263" started-at="2022-12-15T11:44:20Z" finished-at="2022-12-15T11:44:32Z">
+    <test name="Test" duration-ms="9696" started-at="2022-12-19T12:20:39Z" finished-at="2022-12-19T12:20:49Z">
+      <class name="com.obsqura.ProjectPOM.FormSubmitByDataProviderTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="initBrowser" is-config="true" duration-ms="7556" started-at="2022-12-19T16:20:40Z" finished-at="2022-12-19T16:20:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="findCountColumnSize()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="findCountColumnSize" duration-ms="1669" started-at="2022-12-15T11:44:32Z" finished-at="2022-12-15T11:44:34Z">
+        <test-method status="PASS" signature="checkFillAndSubmitFormByDataProvider(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="checkFillAndSubmitFormByDataProvider" duration-ms="1963" started-at="2022-12-19T16:20:47Z" data-provider="formData" finished-at="2022-12-19T16:20:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sreya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iyer]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Shreya96]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Adayar]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[965234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findCountColumnSize -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.RowAndColumnCountTest@5700d6b1]" name="driverClose" is-config="true" duration-ms="202" started-at="2022-12-15T11:44:34Z" finished-at="2022-12-15T11:44:34Z">
+        </test-method> <!-- checkFillAndSubmitFormByDataProvider -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="driverClose" is-config="true" duration-ms="130" started-at="2022-12-19T16:20:49Z" finished-at="2022-12-19T16:20:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.obsqura.ProjectPOM.RowAndColumnCountTest -->
+      </class> <!-- com.obsqura.ProjectPOM.FormSubmitByDataProviderTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

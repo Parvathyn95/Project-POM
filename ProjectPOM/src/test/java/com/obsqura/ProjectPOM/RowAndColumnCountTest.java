@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import pages.OthersDemoPage;
+import pages.ActionsDemoPage;
 import pages.RowAndColumnCount;
 import pages.SideNavigationMenuSelect;
 

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.obsqura.ProjectPOM.SelectInputPageTest">
+      <class name="com.obsqura.ProjectPOM.FormSubmitByDataProviderTest">
         <methods>
           <include name="driverClose"/>
-          <include name="selectColorAndVerifySelectMultipleInputColor"/>
+          <include name="checkFillAndSubmitFormByDataProvider"/>
           <include name="initBrowser"/>
-          <include name="selectColorAndVerifySelectSingleInputColor"/>
         </methods>
-      </class> <!-- com.obsqura.ProjectPOM.SelectInputPageTest -->
+      </class> <!-- com.obsqura.ProjectPOM.FormSubmitByDataProviderTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
