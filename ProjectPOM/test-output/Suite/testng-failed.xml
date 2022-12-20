@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.obsqura.ProjectPOM.FormSubmitByDataProviderTest">
+      <class name="com.obsqura.ProjectPOM.SimpleAlertsTest">
         <methods>
           <include name="driverClose"/>
-          <include name="checkFillAndSubmitFormByDataProvider"/>
+          <include name="checkAndConfirmBoxClickMe"/>
+          <include name="checkAndPromptBoxClickMe"/>
           <include name="initBrowser"/>
+          <include name="checkAndAlertBoxClickMe"/>
         </methods>
-      </class> <!-- com.obsqura.ProjectPOM.FormSubmitByDataProviderTest -->
+      </class> <!-- com.obsqura.ProjectPOM.SimpleAlertsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

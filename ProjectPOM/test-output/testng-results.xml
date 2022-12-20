@@ -1,57 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9696" started-at="2022-12-19T12:20:39Z" finished-at="2022-12-19T12:20:49Z">
+  <suite name="Suite" duration-ms="37522" started-at="2022-12-20T18:17:53Z" finished-at="2022-12-20T18:18:31Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9696" started-at="2022-12-19T12:20:39Z" finished-at="2022-12-19T12:20:49Z">
-      <class name="com.obsqura.ProjectPOM.FormSubmitByDataProviderTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="initBrowser" is-config="true" duration-ms="7556" started-at="2022-12-19T16:20:40Z" finished-at="2022-12-19T16:20:47Z">
+    <test name="Test" duration-ms="37522" started-at="2022-12-20T18:17:53Z" finished-at="2022-12-20T18:18:31Z">
+      <class name="com.obsqura.ProjectPOM.SimpleAlertsTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="8183" started-at="2022-12-20T22:17:53Z" finished-at="2022-12-20T22:18:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="checkFillAndSubmitFormByDataProvider(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="checkFillAndSubmitFormByDataProvider" duration-ms="1963" started-at="2022-12-19T16:20:47Z" data-provider="formData" finished-at="2022-12-19T16:20:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sreya]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Iyer]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Shreya96]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Adayar]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Chennai]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[965234]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="checkAndAlertBoxClickMe()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="checkAndAlertBoxClickMe" duration-ms="628" started-at="2022-12-20T22:18:02Z" finished-at="2022-12-20T22:18:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkFillAndSubmitFormByDataProvider -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.FormSubmitByDataProviderTest@73ad2d6]" name="driverClose" is-config="true" duration-ms="130" started-at="2022-12-19T16:20:49Z" finished-at="2022-12-19T16:20:49Z">
+        </test-method> <!-- checkAndAlertBoxClickMe -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="driverClose" is-config="true" duration-ms="16295" started-at="2022-12-20T22:18:02Z" finished-at="2022-12-20T22:18:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.obsqura.ProjectPOM.FormSubmitByDataProviderTest -->
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="5409" started-at="2022-12-20T22:18:19Z" finished-at="2022-12-20T22:18:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method status="PASS" signature="checkAndConfirmBoxClickMe()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="checkAndConfirmBoxClickMe" duration-ms="660" started-at="2022-12-20T22:18:24Z" finished-at="2022-12-20T22:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndConfirmBoxClickMe -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="driverClose" is-config="true" duration-ms="158" started-at="2022-12-20T22:18:25Z" finished-at="2022-12-20T22:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="5247" started-at="2022-12-20T22:18:25Z" finished-at="2022-12-20T22:18:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method status="PASS" signature="checkAndPromptBoxClickMe()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="checkAndPromptBoxClickMe" duration-ms="612" started-at="2022-12-20T22:18:30Z" finished-at="2022-12-20T22:18:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndPromptBoxClickMe -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.SimpleAlertsTest@3fee9989]" name="driverClose" is-config="true" duration-ms="285" started-at="2022-12-20T22:18:31Z" finished-at="2022-12-20T22:18:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+      </class> <!-- com.obsqura.ProjectPOM.SimpleAlertsTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
