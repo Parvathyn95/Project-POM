@@ -18,7 +18,7 @@
   <!-- <parameter name="expectedString" value="
 Input Form"/> -->
     <classes>
-      <class name="com.obsqura.ProjectPOM.SimpleAlertsTest"/>
+      <class name="com.obsqura.ProjectPOM.PracticeWindowHandlingTest"/>
       	<!-- <methods>
       		<include name="checkAndGenerateHashCode"/>
       	</methods>
