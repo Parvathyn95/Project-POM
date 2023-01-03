@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.obsqura.ProjectPOM.PracticeWindowHandlingTest">
+      <class name="com.obsqura.ProjectPOM.ActionsDemoPageTest">
         <methods>
+          <include name="checkAndVerifyDragAndDrop"/>
           <include name="driverClose"/>
           <include name="initBrowser"/>
-          <include name="checkAndPopupFromClickHere"/>
         </methods>
-      </class> <!-- com.obsqura.ProjectPOM.PracticeWindowHandlingTest -->
+      </class> <!-- com.obsqura.ProjectPOM.ActionsDemoPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

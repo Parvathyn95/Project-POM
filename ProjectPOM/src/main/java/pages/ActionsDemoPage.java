@@ -23,25 +23,21 @@ public class ActionsDemoPage{
 
 	}
 	public void verifyAndDoubleClickDragAndDrop() {
-		driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
 		Actions action = new Actions(driver);
 		WebElement element=driver.findElement(dragAndDropOption);
 		action.doubleClick(element).perform();
 	}
 	public void verifyAndClickDynamicDataLoadingOption() {
-		driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
 		Actions action = new Actions(driver);
 		WebElement element=driver.findElement(DynamicDataLoadingOption);
 		action.contextClick(element).perform();
 	}
 	public void verifyAndClickChartDemo() {
-		driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
 		Actions action = new Actions(driver);
 		WebElement element=driver.findElement(chartDemoOption);
 		action.click(element).perform();
 	}
 	public void verifyAndHoverChartDemo() {
-		driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
 		Actions action = new Actions(driver);
 		WebElement element=driver.findElement(dragAndDropOption);
 	//	action.moveToElement(element).perform();

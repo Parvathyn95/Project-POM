@@ -18,7 +18,11 @@
   <!-- <parameter name="expectedString" value="
 Input Form"/> -->
     <classes>
-      <class name="com.obsqura.ProjectPOM.PracticeWindowHandlingTest"/>
+      <class name="com.obsqura.ProjectPOM.ActionsDemoPageTest">
+      <methods>
+      	<include name="checkAndVerifyDragAndDrop"/>
+      </methods>
+      </class>
       	<!-- <methods>
       		<include name="checkAndGenerateHashCode"/>
       	</methods>

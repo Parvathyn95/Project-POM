@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.obsqura.ProjectPOM.PracticeWindowHandlingTest" hash-for-method="checkAndPopupFromClickHere">checkAndPopupFromClickHere</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.obsqura.ProjectPOM.ActionsDemoPageTest" hash-for-method="checkAndVerifyDragAndDrop">checkAndVerifyDragAndDrop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,23 +120,23 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.obsqura.ProjectPOM.PracticeWindowHandlingTest</span>
+              <span class="class-name">com.obsqura.ProjectPOM.ActionsDemoPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkAndPopupFromClickHere">
-                  </a> <!-- checkAndPopupFromClickHere -->
-                  <span class="method-name">checkAndPopupFromClickHere</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@fdprocessedid=&apos;dukh7a&apos;]&quot;}
+                  <a name="checkAndVerifyDragAndDrop">
+                  </a> <!-- checkAndVerifyDragAndDrop -->
+                  <span class="method-name">checkAndVerifyDragAndDrop</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;list-group-item&apos;]//child::a[@href=&apos;drag-drop.php&apos;]&quot;}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;DESKTOP-23R50OH&apos;, ip: &apos;192.168.0.169&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [682b2a5a654718c9d036b7ed12ceba5d, findElement {using=xpath, value=//input[@fdprocessedid=&apos;dukh7a&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58869}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58869/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 682b2a5a654718c9d036b7ed12ceba5d
+Command: [047a42056f02c77fc84c784d879c22ba, findElement {using=xpath, value=//li[@class=&apos;list-group-item&apos;]//child::a[@href=&apos;drag-drop.php&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62145}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62145/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 047a42056f02c77fc84c784d879c22ba
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -148,8 +148,8 @@ Session ID: 682b2a5a654718c9d036b7ed12ceba5d
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at pages.PracticeWindowHandling.popupFromClickHere(PracticeWindowHandling.java:31)
-	at com.obsqura.ProjectPOM.PracticeWindowHandlingTest.checkAndPopupFromClickHere(PracticeWindowHandlingTest.java:12)
+	at pages.ActionsDemoPage.verifyAndDoubleClickDragAndDrop(ActionsDemoPage.java:27)
+	at com.obsqura.ProjectPOM.ActionsDemoPageTest.checkAndVerifyDragAndDrop(ActionsDemoPageTest.java:19)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -168,7 +168,11 @@ Session ID: 682b2a5a654718c9d036b7ed12ceba5d
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.obsqura.ProjectPOM.PracticeWindowHandlingTest&quot;/&gt;
+      &lt;class name=&quot;com.obsqura.ProjectPOM.ActionsDemoPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkAndVerifyDragAndDrop&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.obsqura.ProjectPOM.ActionsDemoPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,14 +214,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkAndPopupFromClickHere')
-data.setCell(0, 2, 'com.obsqura.ProjectPOM.PracticeWindowHandlingTest')
-data.setCell(0, 3, 17399);
+data.setCell(0, 1, 'checkAndVerifyDragAndDrop')
+data.setCell(0, 2, 'com.obsqura.ProjectPOM.ActionsDemoPageTest')
+data.setCell(0, 3, 20192);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -232,9 +236,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.obsqura.ProjectPOM.ActionsDemoPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">checkAndVerifyAndHoverChartDemo</span>
+                <br/>
+                <span class="ignored-method-name">checkAndVerifyAndClickDynamicDataLoadingOption</span>
+                <br/>
+                <span class="ignored-method-name">checkAndVerifyAndClickChartDemo</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -243,7 +258,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.ProjectPOM.PracticeWindowHandlingTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.obsqura.ProjectPOM.ActionsDemoPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initBrowser</span>
                 <span class="method-start">0 ms</span>
@@ -251,12 +266,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">checkAndPopupFromClickHere</span>
-                <span class="method-start">6439 ms</span>
+                <span class="method-name">checkAndVerifyDragAndDrop</span>
+                <span class="method-start">14243 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverClose</span>
-                <span class="method-start">23838 ms</span>
+                <span class="method-start">34441 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

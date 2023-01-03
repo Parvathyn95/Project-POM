@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23936" started-at="2022-12-22T08:05:26Z" finished-at="2022-12-22T08:05:50Z">
+  <suite name="Suite" duration-ms="34742" started-at="2023-01-03T02:29:23Z" finished-at="2023-01-03T02:29:57Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="23936" started-at="2022-12-22T08:05:26Z" finished-at="2022-12-22T08:05:50Z">
-      <class name="com.obsqura.ProjectPOM.PracticeWindowHandlingTest">
-        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.PracticeWindowHandlingTest@3fee9989]" name="initBrowser" is-config="true" duration-ms="6439" started-at="2022-12-22T12:05:26Z" finished-at="2022-12-22T12:05:33Z">
+    <test name="Test" duration-ms="34742" started-at="2023-01-03T02:29:23Z" finished-at="2023-01-03T02:29:57Z">
+      <class name="com.obsqura.ProjectPOM.ActionsDemoPageTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:com.obsqura.ProjectPOM.ActionsDemoPageTest@5700d6b1]" name="initBrowser" is-config="true" duration-ms="14243" started-at="2023-01-03T06:29:23Z" finished-at="2023-01-03T06:29:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="FAIL" signature="checkAndPopupFromClickHere()[pri:0, instance:com.obsqura.ProjectPOM.PracticeWindowHandlingTest@3fee9989]" name="checkAndPopupFromClickHere" duration-ms="17399" started-at="2022-12-22T12:05:33Z" finished-at="2022-12-22T12:05:50Z">
+        <test-method status="FAIL" signature="checkAndVerifyDragAndDrop()[pri:0, instance:com.obsqura.ProjectPOM.ActionsDemoPageTest@5700d6b1]" name="checkAndVerifyDragAndDrop" duration-ms="20192" started-at="2023-01-03T06:29:37Z" finished-at="2023-01-03T06:29:57Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@fdprocessedid='dukh7a']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='list-group-item']//child::a[@href='drag-drop.php']"}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-23R50OH', ip: '192.168.0.169', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [682b2a5a654718c9d036b7ed12ceba5d, findElement {using=xpath, value=//input[@fdprocessedid='dukh7a']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58869}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58869/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 682b2a5a654718c9d036b7ed12ceba5d]]>
+Command: [047a42056f02c77fc84c784d879c22ba, findElement {using=xpath, value=//li[@class='list-group-item']//child::a[@href='drag-drop.php']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62145}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62145/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 047a42056f02c77fc84c784d879c22ba]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@fdprocessedid='dukh7a']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='list-group-item']//child::a[@href='drag-drop.php']"}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-23R50OH', ip: '192.168.0.169', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [682b2a5a654718c9d036b7ed12ceba5d, findElement {using=xpath, value=//input[@fdprocessedid='dukh7a']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58869}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58869/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 682b2a5a654718c9d036b7ed12ceba5d
+Command: [047a42056f02c77fc84c784d879c22ba, findElement {using=xpath, value=//li[@class='list-group-item']//child::a[@href='drag-drop.php']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62145}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62145/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 047a42056f02c77fc84c784d879c22ba
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -49,8 +49,8 @@ Session ID: 682b2a5a654718c9d036b7ed12ceba5d
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at pages.PracticeWindowHandling.popupFromClickHere(PracticeWindowHandling.java:31)
-	at com.obsqura.ProjectPOM.PracticeWindowHandlingTest.checkAndPopupFromClickHere(PracticeWindowHandlingTest.java:12)
+	at pages.ActionsDemoPage.verifyAndDoubleClickDragAndDrop(ActionsDemoPage.java:27)
+	at com.obsqura.ProjectPOM.ActionsDemoPageTest.checkAndVerifyDragAndDrop(ActionsDemoPageTest.java:19)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -81,12 +81,12 @@ Session ID: 682b2a5a654718c9d036b7ed12ceba5d
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAndPopupFromClickHere -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.PracticeWindowHandlingTest@3fee9989]" name="driverClose" is-config="true" duration-ms="81" started-at="2022-12-22T12:05:50Z" finished-at="2022-12-22T12:05:50Z">
+        </test-method> <!-- checkAndVerifyDragAndDrop -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.obsqura.ProjectPOM.ActionsDemoPageTest@5700d6b1]" name="driverClose" is-config="true" duration-ms="249" started-at="2023-01-03T06:29:57Z" finished-at="2023-01-03T06:29:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.obsqura.ProjectPOM.PracticeWindowHandlingTest -->
+      </class> <!-- com.obsqura.ProjectPOM.ActionsDemoPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
